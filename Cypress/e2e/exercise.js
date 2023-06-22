@@ -70,7 +70,7 @@ export class exercise {
 visit_website(){
     cy.viewport(1320, 768);
     cy.visit('https://www.automationexercise.com')
-    cy.wait(3000)
+    cy.wait(2000)
     cy.get(this.HomepageSlider).should('be.visible')
 
 }
@@ -151,14 +151,14 @@ logout(){
 
 }
 
-contactUs_Form(name,email,subject,message){
+contactUs_Form(name,email,subject,message,file){
     cy.get(this.ContactUsBtn).click()
     cy.get(this.GetInTouch_Text).should('be.visible')
     cy.get(this.ContactForm_name).type(name)
     cy.get(this.ContactForm_Email).type(email)
     cy.get(this.Contact_subject).type(subject)
     cy.get(this.Contact_Message).type(message)
-    cy.get(this.chooseFile).selectFile('package.json')
+    cy.get(this.chooseFile).selectFile(file)
     cy.get(this.Submit).click()
     cy.get(this.SuccessMsg).should('be.visible')
 
@@ -182,5 +182,6 @@ productSearch(keyword){
     cy.get(this.Sreach_Products).should('be.visible')
 
 }
+
 
 }

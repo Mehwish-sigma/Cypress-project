@@ -1,6 +1,8 @@
 import { exercise } from "./exercise";
+import { products } from "./products";
 
 const ex = new exercise()
+const pro = new products()
 
 describe('User Signup',()=>{
     beforeEach(()=>{
@@ -85,7 +87,7 @@ describe('Contact Us Form',()=>{
     })
 
     it('Contact Us form with Valid Credentials',()=>{
-      ex.contactUs_Form('Mehwish','mehwish5@gmail.com','My Project','This is a test')
+      ex.contactUs_Form('Mehwish','mehwish5@gmail.com','My Project','This is a test','package.json')
     })
 
 })
@@ -102,9 +104,52 @@ describe('Products Page',()=>{
     
   })
 
-  it.only('Product Search',()=>{
+  it('Product Search',()=>{
     ex.productPage_landing()
     ex.productSearch('top')
     
   })
+
+})
+
+describe('Verify subscription',()=>{
+  beforeEach(()=>{
+    ex.visit_website()
+
+  })
+
+  it('Verify subscription on Home page',()=>{
+    pro.scrollToBottom()
+    pro.Subscription('mehwish@gmail.com')
+    
+  })
+
+  it('Verify subscription on Cart Page',()=>{
+    pro.ClickCart_Btn()
+    pro.Subscription('mehwish@gmail.com')
+    
+  })
+
+  it('Add Products in the cart',()=>{
+    ex.productPage_landing()
+    pro.ProductAddToCart()
+    
+  })
+
+  it('Verify Products quantity in the cart ',()=>{
+    ex.productPage_landing()
+    ex.productDetails()
+    pro.product_quantity(4)
+    pro.addToCart()
+    
+  })
+
+  it.only('Place Order: Register while Checkout',()=>{
+    ex.productPage_landing()
+    ex.ProductAddToCart()
+    
+    
+
+  })
+
 })
