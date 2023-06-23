@@ -33,7 +33,7 @@ describe('User Signup',()=>{
     })
 
     it('Signup with Right Credentials',()=>{
-      ex.EnterSignup_info('Mehwish','mehwish16@gmail.com')
+      ex.EnterSignup_info('Mehwish','mehwish20@gmail.com')
       ex.Signup_moredetails('Mrs','123456',9,'June','1999')
       ex.address_info('Mehwish','Liaqat','newCompany','street 10, main residence','House 24b,street 4','India','kerela','Hydrabad',765487,'+91747746347483')
       ex.deleteAccount()
@@ -49,11 +49,11 @@ describe('User Login',()=>{
     })
 
     it('Login with invalid email',()=>{
-      ex.login('mehwis@gmail.com','123456')
+      ex.login('mehwi@gmail.com','123456')
     })
 
     it('Login with invalid password',()=>{
-      ex.login('mehwish4@gmail.com','12345678')
+      ex.login('mehwish4@gmail.com','12345gsj678')
     })
 
     it('Login with invalid email and password',()=>{
@@ -66,7 +66,7 @@ describe('User Login',()=>{
     })
 
     it('Login with Right Credentials and Delete account',()=>{
-      ex.login('mehwish4@gmail.com','123456')
+      ex.login('mehwish5@gmail.com','123456')
       ex.deleteAccount()      //Delete Account
     })
 
@@ -83,7 +83,7 @@ describe('Contact Us Form',()=>{
     })
 
     it('Contact Us form with no name',()=>{
-      ex.contactUs_Form('','mehwish5@gmail.com','My Project','This is a test')
+      ex.contactUs_Form(' ','mehwish5@gmail.com','My Project','This is a test')
     })
 
     it('Contact Us form with Valid Credentials',()=>{
@@ -91,6 +91,7 @@ describe('Contact Us Form',()=>{
     })
 
 })
+
 
 describe('Products Page',()=>{
   beforeEach(()=>{
@@ -125,6 +126,7 @@ describe('Products Page',()=>{
     pro.paymentProceed()
     ex.login('mehwish19@gmail.com','123456')
     pro.ClickCart_Btn() 
+    ex.logout()
     
   })
 
@@ -137,7 +139,7 @@ describe('Products Page',()=>{
 
   it('View Brand Products',()=>{
     pro.ViewBrands()
-    
+
   })
 
 })
@@ -267,7 +269,7 @@ describe('Scroll Up',()=>{
 
   })
 
-  it.only('Verify Scroll Up using Arrow button and Scroll Down functionality',()=>{
+  it('Verify Scroll Up using Arrow button and Scroll Down functionality',()=>{
     pro.scrollToBottom()
     pro.scrollwithArrow()
 
