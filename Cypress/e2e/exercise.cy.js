@@ -61,12 +61,12 @@ describe('User Login',()=>{
     })
   
     it('Login with Right Credentials and Logout',()=>{
-      ex.login('mehwish4@gmail.com','123456')
+      ex.login('mehwish19@gmail.com','123456')
       ex.logout()      //Logout
     })
 
     it('Login with Right Credentials and Delete account',()=>{
-      ex.login('mehwish5@gmail.com','123456')
+      ex.login('mehwish7@gmail.com','123456')
       ex.deleteAccount()      //Delete Account
     })
 

@@ -128,9 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.DS_Store
 
 
 allure-report/
 allure-results/
 videos/
 screenshots/
+downloads/
