@@ -33,7 +33,7 @@ describe('User Signup',()=>{
     })
 
     it('Signup with Right Credentials',()=>{
-      ex.EnterSignup_info('Mehwish','mehwish20@gmail.com')
+      ex.EnterSignup_info('Mehwish','mehwish21@gmail.com')
       ex.Signup_moredetails('Mrs','123456',9,'June','1999')
       ex.address_info('Mehwish','Liaqat','newCompany','street 10, main residence','House 24b,street 4','India','kerela','Hydrabad',765487,'+91747746347483')
       ex.deleteAccount()
