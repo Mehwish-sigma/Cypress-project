@@ -1,5 +1,5 @@
 /// <reference types = "cypress"/>
-import  User  from "./apiMethods.js"
+import  User  from "./ApiTests/apiMethods.js"
 
 
 let userName = 'john.doe';
