@@ -8,5 +8,10 @@ module.exports = defineConfig({
       allureWriter(on, config);
       return config;
     },
+    
+    env:{
+      baseUrl:'https://gorest.co.in/public/v2',
+      token:'Bearer 6cb9afa33c14843ea4c7388c8fa6f0a7ad304efff55c8f7eedb79e2f1fbd5693'
+    }, 
   },
 });
